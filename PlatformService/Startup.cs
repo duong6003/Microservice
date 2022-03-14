@@ -5,7 +5,10 @@ namespace PlatformService
     {
         public static IServiceCollection AddConfiguration(this IServiceCollection services)
         {
-            services.AddDbContext<AppDbContext>();
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            #region Add app service
+            services.AddScoped<IPlatformRepo,PlatformRepo>();
+            #endregion
             return services;
         }
     }

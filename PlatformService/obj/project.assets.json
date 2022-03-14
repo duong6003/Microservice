@@ -2104,19 +2104,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\PC\\.nuget\\packages\\": {}
+    "C:\\Users\\Duong\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Duong\\project\\Microservice\\PlatformService\\PlatformService.csproj",
+      "projectUniqueName": "F:\\học\\Duong project\\Microservice\\Microservice\\PlatformService\\PlatformService.csproj",
       "projectName": "PlatformService",
-      "projectPath": "C:\\Duong\\project\\Microservice\\PlatformService\\PlatformService.csproj",
-      "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Duong\\project\\Microservice\\PlatformService\\obj\\",
+      "projectPath": "F:\\học\\Duong project\\Microservice\\Microservice\\PlatformService\\PlatformService.csproj",
+      "packagesPath": "C:\\Users\\Duong\\.nuget\\packages\\",
+      "outputPath": "F:\\học\\Duong project\\Microservice\\Microservice\\PlatformService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Duong\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
