@@ -1,4 +1,3 @@
-using Microsoft.EntityFrameworkCore;
 using PlatformService.Data;
 namespace PlatformService
 {
@@ -6,7 +5,10 @@ namespace PlatformService
     {
         public static IServiceCollection AddConfiguration(this IServiceCollection services)
         {
-            services.AddDbContext<AppDbContext>(opt =>  opt.UseInMemoryDatabase("InMem"));
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            #region Add app service
+            services.AddScoped<IPlatformRepo,PlatformRepo>();
+            #endregion
             return services;
         }
     }
