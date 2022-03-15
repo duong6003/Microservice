@@ -5,18 +5,19 @@ using PlatformService.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-if (builder.Environment.IsProduction())
-{
-    Console.WriteLine("--> Using SqlServer Db");
-    builder.Services.AddDbContext<AppDbContext>(opt =>
-        opt.UseSqlServer(builder.Configuration.GetConnectionString("PlatformsConn")));
-}
-else
-{
+// if (builder.Environment.IsProduction())
+// {
+//     string connection = builder.Configuration.GetConnectionString("PlatformsConn");
+//     Console.WriteLine("--> Using MySql Db");
+//     builder.Services.AddDbContextPool<AppDbContext>(opt =>
+//         opt.UseMySql(connection,ServerVersion.AutoDetect(connection)));
+// }
+// else
+// {
     Console.WriteLine("--> Using InMem Db");
     builder.Services.AddDbContext<AppDbContext>(opt =>
          opt.UseInMemoryDatabase("InMem"));
-}
+// }
 builder.Services.AddConfiguration();
 builder.Services.AddControllers();
 
