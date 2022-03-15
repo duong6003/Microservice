@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using PlatformService.Data;
 namespace PlatformService
 {
@@ -5,7 +6,7 @@ namespace PlatformService
     {
         public static IServiceCollection AddConfiguration(this IServiceCollection services)
         {
-            services.AddDbContext<AppDbContext>();
+            services.AddDbContext<AppDbContext>(opt =>  opt.UseInMemoryDatabase("InMem"));
             return services;
         }
     }
