@@ -1,16 +1,14 @@
-using PlatformService.Data;
-using PlatformService.SyncDataServices.Http;
+using CommandsService.Data;
 
-namespace PlatformService
+namespace CommandsService
 {
     public static class Startup
     {
         public static IServiceCollection AddConfiguration(this IServiceCollection services)
         {
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-            services.AddHttpClient<ICommandDataClient, HttpCommandDataClient>();
             #region Add app service
-            services.AddScoped<IPlatformRepo,PlatformRepo>();
+            services.AddScoped<ICommandRepo,CommandRepo>();
             #endregion
             return services;
         }

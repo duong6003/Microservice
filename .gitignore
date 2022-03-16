@@ -1,3 +1,5 @@
+/CommandsService/obj*
+/CommandsService/bin*
 /PlatformService/obj*
 /PlatformService/bin*
 .vscode*
