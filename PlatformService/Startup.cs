@@ -1,3 +1,4 @@
+using PlatformService.AsyncDataServices;
 using PlatformService.Data;
 using PlatformService.SyncDataServices.Http;
 
@@ -9,6 +10,7 @@ namespace PlatformService
         {
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddHttpClient<ICommandDataClient, HttpCommandDataClient>();
+            services.AddSingleton<IMessageBusClient, MessageBusClient>();
             #region Add app service
             services.AddScoped<IPlatformRepo,PlatformRepo>();
             #endregion

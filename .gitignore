@@ -1,5 +1,7 @@
-/CommandsService/obj*
-/CommandsService/bin*
-/PlatformService/obj*
-/PlatformService/bin*
+/CommandsService/obj
+/CommandsService/bin
+/CommandsService/Migrations
+/PlatformService/obj
+/PlatformService/bin
+/PlatformService/Migrations
 .vscode*
