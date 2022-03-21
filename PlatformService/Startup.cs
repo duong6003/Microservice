@@ -11,6 +11,7 @@ namespace PlatformService
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddHttpClient<ICommandDataClient, HttpCommandDataClient>();
             services.AddSingleton<IMessageBusClient, MessageBusClient>();
+            services.AddGrpc();
             #region Add app service
             services.AddScoped<IPlatformRepo,PlatformRepo>();
             #endregion

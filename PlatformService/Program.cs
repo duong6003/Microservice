@@ -1,3 +1,4 @@
+using CommandsService.SyncDataServices.Grpc;
 using Microsoft.EntityFrameworkCore;
 using PlatformService;
 using PlatformService.Data;
@@ -39,7 +40,13 @@ if (app.Environment.IsDevelopment())
 
 app.UseAuthorization();
 
+#region route
 app.MapControllers();
+app.MapGrpcService<GrpcPlatformService>();
+app.MapGet("/protos/platforms.proto", async context => {
+    await context.Response.WriteAsync(File.ReadAllText("Protos/platforms.proto"));
+});
+#endregion
 
 PrepDb.PrepPopulation(app);
 
